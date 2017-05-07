@@ -2,7 +2,7 @@
 // and all the code that must happen within a jQuery .ready() function
 // inside on-click.js (hint: it might be an .on("click", ...) event handler).
 
-"use strict";
+//"use strict";
 
 // this is the base API url:
 var baseUrl = "http://mimeocarlisting.azurewebsites.net/api/cars/";
@@ -56,10 +56,10 @@ function fetchJSON() {
         contentType: 'application/json',
         dataType: 'jsonp',
         success: function(result) {
+          console.log(result);
 
           addCarsToDOM(result); //calling addCarsToDOM and passing result as an argument
 
-          console.log(result);
           // console.log("Make: " + result[0]["Make"]);
           // console.log("Model: " + result[0]["Model"]);
           // console.log("Year: " + result[0]["Year"]);

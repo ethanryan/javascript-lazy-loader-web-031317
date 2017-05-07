@@ -10,9 +10,7 @@ $(document).ready(function() {
   // add click listener here
   // it should call on fetchJSON()
 
-  $( "#load-cars" ).click(function() {
-    console.log( "load cars button clicked" );
-    fetchJSON();
-    console.log( "fetchJSON() called" );
-    }); //end #load-cars button click function
+  $("#load-cars").on("click", function() {
+     fetchJSON();
+  });
 }); //end (document).ready
